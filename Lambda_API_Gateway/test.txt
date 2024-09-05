@@ -1,0 +1,5 @@
+aws lambda invoke --function-name LambdaFunctionOverHttps --payload file://input.txt outputfile.txt --cli-binary-format raw-in-base64-out
+
+curl https://61w8f3dc9e.execute-api.ca-central-1.amazonaws.com/test/DynamoDBManager -d '{\"operation\": \"read\", \"payload\": {\"Item\": {\"id\": \"1234ABCD\", \"number\": 5}}}'
+curl https://61w8f3dc9e.execute-api.ca-central-1.amazonaws.com/test/DynamoDBManager -d \"{\"operation\": \"read\", \"payload\": {\"Key\": {\"id\": \"1234ABCD\"}}}\"
+curl https://61w8f3dc9e.execute-api.ca-central-1.amazonaws.com/test/DynamoDBManager -d "{\"operation\": \"read\", \"payload\": {\"Key\": {\"id\": \"1234ABCD\"}}}"
